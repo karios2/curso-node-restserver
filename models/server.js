@@ -3,9 +3,9 @@ const cors = require('cors');
 
 class Server {
 
-    constructor() {
+   constructor() {
         this.app = express();
-        this.port = process.env.PORT;
+        this.port = process.env.PORT || 3000;
         this.usuariosPath = '/api/usuarios';
         //Middelware
         this.middlewares();
@@ -31,9 +31,8 @@ class Server {
 
 
 
-
     routes() {
-        this.app.use(this.usuariosPath, require('../routes/usuarios'))
+        this.app.use(this.usuariosPath, require('../routes/usuarios')) 
     }
 
 

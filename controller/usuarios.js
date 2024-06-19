@@ -12,6 +12,8 @@ const usuariosGet = (req = request, res = response) => {
 
 
 
+
+
 const usuariosPut =(req, res= response) => {
     const {id } = req.params; // params puede traer muchos datos.
     res.json({
@@ -19,6 +21,7 @@ const usuariosPut =(req, res= response) => {
         id
     });
 }
+
 
 
 const usuariosPost = (req, res = response) => {
@@ -29,6 +32,8 @@ const usuariosPost = (req, res = response) => {
         edad
     });
 }
+
+
 
 
 const usuariosDelete = (req, res = response) => {
